@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAK CLOTH | Premium Pakistani Fashion</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#f8f5f0;
+    color:#171717;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #eee;
+    padding:18px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.logo span{
+    font-weight:400;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    font-size:14px;
+    color:#555;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#000;
+}
+
+.whatsapp{
+    background:#171717;
+    color:white;
+    padding:12px 22px;
+    font-size:13px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding:150px 8% 80px;
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,.78),
+    rgba(0,0,0,.20)),
+    url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+    color:white;
+}
+
+.label{
+    letter-spacing:5px;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(55px,8vw,100px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    font-style:italic;
+    font-weight:400;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.8;
+    max-width:550px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#111;
+    padding:15px 28px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ddd;
+}
+
+.btn-dark{
+    background:#171717;
+    color:white;
+}
+
+.btn-dark:hover{
+    background:#333;
+}
+
+/* INTRO */
+
+.intro{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    padding:110px 25px;
+}
+
+.intro small{
+    letter-spacing:5px;
+}
+
+.intro h2{
+    font-family:"Playfair Display",serif;
+    font-size:50px;
+    margin:15px 0 20px;
+}
+
+.intro p{
+    color:#666;
+    line-height:1.9;
+}
+
+/* COLLECTION */
+
+.collection{
+    padding:90px 7%;
+}
+
+.heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:45px;
+}
+
+.heading small{
+    letter-spacing:4px;
+}
+
+.heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:52px;
+}
+
+.heading a{
+    border-bottom:1px solid #222;
+    padding-bottom:5px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.product-image{
+    height:390px;
+    background:#ddd;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.product:hover img{
+    transform:scale(1.05);
+}
+
+.product-info{
+    padding:22px;
+}
+
+.code{
+    font-size:11px;
+    color:#999;
+    letter-spacing:2px;
+}
+
+.product h3{
+    font-family:"Playfair Display",serif;
+    font-size:21px;
+    margin:8px 0;
+}
+
+.price{
+    font-weight:600;
+    font-size:17px;
+    margin-bottom:15px;
+}
+
+.order{
+    display:block;
+    background:#171717;
+    color:white;
+    text-align:center;
+    padding:11px;
+    font-size:12px;
+}
+
+/* ABOUT */
+
+.about{
+    background:#171717;
+    color:white;
+    padding:110px 8%;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about small{
+    letter-spacing:5px;
+    color:#aaa;
+}
+
+.about h2{
+    font-family:"Playfair Display",serif;
+    font-size:55px;
+    margin:18px 0 25px;
+}
+
+.about p{
+    color:#aaa;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.about-box{
+    border:1px solid #555;
+    padding:55px;
+    text-align:center;
+}
+
+.about-box h3{
+    font-family:"Playfair Display",serif;
+    font-size:42px;
+}
+
+.about-box strong{
+    display:block;
+    font-size:30px;
+    margin-top:30px;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:110px 8%;
+    text-align:center;
+}
+
+.contact h2{
+    font-family:"Playfair Display",serif;
+    font-size:55px;
+    margin:15px 0;
+}
+
+.contact-text{
+    color:#666;
+    margin-bottom:45px;
+}
+
+.contact-grid{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    background:white;
+    padding:45px 25px;
+}
+
+.contact-card small{
+    letter-spacing:3px;
+    color:#999;
+}
+
+.contact-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:24px;
+    margin:15px 0 25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer .logo{
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#999;
+    font-size:13px;
+    margin-top:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        padding:140px 25px 70px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-image{
+        height:330px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        padding:80px 25px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:430px;
+    }
+
+    .intro h2,
+    .heading h2,
+    .about h2,
+    .contact h2{
+        font-size:40px;
+    }
+
+    .heading{
+        display:block;
+    }
+
+    .heading a{
+        display:inline-block;
+        margin-top:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        PAK <span>CLOTH</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a
+    class="whatsapp"
+    href="https://wa.me/923084257110"
+    target="_blank">
+        WhatsApp
+    </a>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="label">
+            PAK CLOTH • PREMIUM FASHION
+        </div>
+
+        <h1>
+            Elegance<br>
+            <span>Made Beautiful</span>
+        </h1>
+
+        <p>
+            Discover elegant Pakistani clothing designed
+            for women who love timeless style,
+            graceful details and premium fashion.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#collection" class="btn">
+                Explore Collection
+            </a>
+
+            <a
+            href="https://wa.me/923084257110?text=Hello%20PAK%20CLOTH%2C%20I%20want%20to%20place%20an%20order."
+            target="_blank"
+            class="btn btn-dark">
+                Order on WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <small>WELCOME TO PAK CLOTH</small>
+
+    <h2>
+        Pakistani Fashion,
+        Reimagined.
+    </h2>
+
+    <p>
+        Beautiful designs, elegant details and
+        a timeless Pakistani fashion aesthetic.
+        Discover our latest collection and find
+        your perfect style.
+    </p>
+
+</section>
+
+
+<!-- COLLECTION -->
+
+<section class="collection" id="collection">
+
+    <div class="heading">
+
+        <div>
+            <small>OUR COLLECTION</small>
+
+            <h2>
+                Featured Designs
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85"
+                alt="JW 184">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 184
+                </div>
+
+                <h3>
+                    Premium Collection
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F184"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85"
+                alt="JW 185">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 185
+                </div>
+
+                <h3>
+                    Elegant Collection
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F185"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=85"
+                alt="JW 186">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 186
+                </div>
+
+                <h3>
+                    Luxury Collection
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F186"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
+                alt="JW 187">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 187
+                </div>
+
+                <h3>
+                    Signature Collection
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F187"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=900&q=85"
+                alt="JW 188">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 188
+                </div>
+
+                <h3>
+                    Classic Collection
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F188"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=900&q=85"
+                alt="JW 189">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 189
+                </div>
+
+                <h3>
+                    Premium Design
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F189"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1610189012906-0d5f5b8f6b4b?auto=format&fit=crop&w=900&q=85"
+                alt="JW 190">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 190
+                </div>
+
+                <h3>
+                    Luxury Design
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F190"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?auto=format&fit=crop&w=900&q=85"
+                alt="JW 191">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="code">
+                    JW / 191
+                </div>
+
+                <h3>
+                    Exclusive Collection
+                </h3>
+
+                <div class="price">
+                    Rs. 7,000
+                </div>
+
+                <a
+                class="order"
+                href="https://wa.me/923084257110?text=I%20want%20to%20order%20JW%2F191"
+                target="_blank">
+                    ORDER ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div>
+
+        <small>ABOUT PAK CLOTH</small>
+
+        <h2>
+            Tradition Meets
+            Modern Style.
+        </h2>
+
+        <p>
+            PAK CLOTH brings elegant Pakistani fashion
+            together with a modern and sophisticated
+            aesthetic.
+        </p>
+
+        <p>
+            Our collection is designed for customers
+            who appreciate graceful fashion,
+            beautiful details and timeless style.
+        </p>
+
+        <a href="#contact" class="btn">
+            Contact Us
+        </a>
+
+    </div>
+
+
+    <div class="about-box">
+
+        <h3>
+            PAK CLOTH
+        </h3>
+
+        <p>
+            Premium Pakistani Fashion
+        </p>
+
+        <strong>
+            Rs. 7,000
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <small>
+        GET IN TOUCH
+    </small>
+
+    <h2>
+        We'd Love To Hear From You
+    </h2>
+
+    <p class="contact-text">
+        For orders, questions and product information,
+        contact us directly.
+    </p>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-card">
+
+            <small>
+                WHATSAPP
+            </small>
+
+            <h3>
+                03084257110
+            </h3>
+
+            <a
+            href="https://wa.me/923084257110"
+            target="_blank"
+            class="btn btn-dark">
+
+                Chat on WhatsApp
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <small>
+                EMAIL
+            </small>
+
+            <h3>
+                maoozboss123@gmail.com
+            </h3>
+
+            <a
+            href="mailto:maoozboss123@gmail.com"
+            class="btn btn-dark">
+
+                Send Email
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        PAK <span>CLOTH</span>
+    </div>
+
+    <p>
+        Premium Pakistani Fashion
+    </p>
+
+    <p>
+        WhatsApp: 03084257110
+    </p>
+
+    <p>
+        Email: maoozboss123@gmail.com
+    </p>
+
+    <p>
+        © 2026 PAK CLOTH. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
+
